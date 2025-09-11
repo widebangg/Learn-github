@@ -1,3 +1,1 @@
-# Learn-github
-I'm interested in this.
-RISC-V (pronounced "risk-five")[3]: 1  is a free and open standard instruction set architecture (ISA) based on reduced instruction set computer (RISC) principles. Unlike proprietary ISAs such as x86 and ARM, RISC-V is described as "free and open" because its specifications are released under permissive open-source licenses and can be implemented without paying royalties.[4]
+RISC-V (pronounced "risk-five")[3]: 1  is a free and open standard instruction set architecture (ISA) based on reduced instruction set computer (RISC) principles. Unlike proprietary ISAs such as x86 and ARM, RISC-V is described as "free and open" because its specifications are released under permissive open-source licenses and can be implemented without paying royalties.[4].
