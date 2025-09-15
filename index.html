@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather Dashboard</h1>
+            <p>Get current weather information for any city worldwide</p>
+        </header>
+
+        <main>
+            <div class="search-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="cityInput" 
+                        placeholder="Enter city name (e.g., London, Tokyo, New York)"
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn">Search</button>
+                </div>
+                
+                <div class="api-key-section">
+                    <details>
+                        <summary>⚙️ API Key Configuration</summary>
+                        <div class="api-instructions">
+                            <p><strong>To use this weather dashboard, you need a free API key from OpenWeatherMap:</strong></p>
+                            <ol>
+                                <li>Visit <a href="https://openweathermap.org/api" target="_blank" rel="noopener">OpenWeatherMap API</a></li>
+                                <li>Sign up for a free account</li>
+                                <li>Get your API key from the dashboard</li>
+                                <li>Enter it below (stored locally in your browser)</li>
+                            </ol>
+                            <div class="input-group">
+                                <input 
+                                    type="text" 
+                                    id="apiKeyInput" 
+                                    placeholder="Enter your OpenWeatherMap API key"
+                                    autocomplete="off"
+                                >
+                                <button id="saveApiKeyBtn">Save</button>
+                            </div>
+                            <p class="note">📝 Your API key is stored locally and never sent to any server except OpenWeatherMap.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div id="loadingSpinner" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Fetching weather data...</p>
+            </div>
+
+            <div id="errorMessage" class="error-message hidden"></div>
+
+            <div id="weatherCard" class="weather-card hidden">
+                <div class="weather-header">
+                    <h2 id="cityName"></h2>
+                    <p id="currentTime"></p>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature-section">
+                        <div class="temperature">
+                            <span id="temperature">--</span>
+                            <span class="unit">°C</span>
+                        </div>
+                        <p id="weatherDescription"></p>
+                    </div>
+                    
+                    <div class="weather-icon">
+                        <img id="weatherIconImg" src="" alt="Weather icon">
+                    </div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="label">Feels like</span>
+                        <span id="feelsLike">--°C</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Humidity</span>
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Wind</span>
+                        <span id="windSpeed">-- km/h</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Pressure</span>
+                        <span id="pressure">-- hPa</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Visibility</span>
+                        <span id="visibility">-- km</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">UV Index</span>
+                        <span id="uvIndex">--</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Weather data provided by <a href="https://openweathermap.org" target="_blank" rel="noopener">OpenWeatherMap</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
