@@ -31,7 +31,6 @@ class WeatherDashboard {
         this.windSpeed = document.getElementById('windSpeed');
         this.pressure = document.getElementById('pressure');
         this.visibility = document.getElementById('visibility');
-        this.uvIndex = document.getElementById('uvIndex');
     }
 
     bindEvents() {
